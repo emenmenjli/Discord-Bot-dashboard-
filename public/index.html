@@ -35,7 +35,7 @@
       <div class="feature-card"><div class="icon">⚙️</div><h3>Custom Commands</h3><p>Create your own commands with dynamic placeholders. Restrict them to specific roles or let everyone use them. Supports text responses and rich embeds.</p></div>
       <div class="feature-card"><div class="icon">🛡️</div><h3>Moderation</h3><p>Kick, ban, mute, warn, and purge messages — all with automatic case logging. Keep your server safe with powerful moderation tools.</p></div>
       <div class="feature-card"><div class="icon">📈</div><h3>Leveling</h3><p>Members earn XP by chatting in text channels. Track progress with levels and a leaderboard. Enable or disable anytime from the dashboard.</p></div>
-      <div class="feature-card"><div class="icon">🎫</div><h3>Tickets</h3><p>Let users open support tickets with <code>sticket</code>. Staff gets a private channel to help. Close tickets with <code>sclose</code>. Assign staff roles from the dashboard.</p></div>
+      <div class="feature-card"><div class="icon">🎫</div><h3>Tickets</h3><p>Let users open tickets via <code>sticket</code> or click a button on the ticket panel. Staff gets a private channel with close and claim buttons. Assign staff roles from the dashboard.</p></div>
       <div class="feature-card"><div class="icon">👋</div><h3>Welcome & Leave</h3><p>Greet new members and say goodbye when they leave. Fully customizable messages with placeholders for user name, server name, and member count.</p></div>
       <div class="feature-card"><div class="icon">🎯</div><h3>Autoroles</h3><p>Automatically assign roles when someone joins your server. Set up multiple autoroles from the dashboard — perfect for verification or self-roles.</p></div>
     </div>
@@ -58,10 +58,13 @@
           <tr><td><code>sban</code></td><td>Ban a member from the server</td><td><code>sban @user reason</code></td></tr>
           <tr><td><code>smute</code></td><td>Mute a member (text only)</td><td><code>smute @user reason</code></td></tr>
           <tr><td><code>sunmute</code></td><td>Unmute a member</td><td><code>sunmute @user</code></td></tr>
-          <tr><td><code>swarn</code></td><td>Warn a member (logged)</td><td><code>swarn @user reason</code></td></tr>
-          <tr><td><code>sclear</code></td><td>Bulk delete messages</td><td><code>sclear 10</code></td></tr>
-          <tr><td><code>sticket</code></td><td>Create a support ticket</td><td><code>sticket Need help with roles</code></td></tr>
-          <tr><td><code>sclose</code></td><td>Close your open ticket</td><td><code>sclose</code></td></tr>
+           <tr><td><code>swarn</code></td><td>Warn a member (logged)</td><td><code>swarn @user reason</code></td></tr>
+           <tr><td><code>swarns</code></td><td>View all warns for a user</td><td><code>swarns @user</code></td></tr>
+           <tr><td><code>sclearwarns</code></td><td>Clear all warns for a user (admin)</td><td><code>sclearwarns @user</code></td></tr>
+           <tr><td><code>sclear</code></td><td>Bulk delete messages</td><td><code>sclear 10</code></td></tr>
+           <tr><td><code>sticket</code></td><td>Create a support ticket</td><td><code>sticket Need help with roles</code></td></tr>
+           <tr><td><code>sclose</code></td><td>Close your open ticket</td><td><code>sclose</code></td></tr>
+           <tr><td><code>sticketsetup</code></td><td>Post a ticket panel with buttons (admin)</td><td><code>sticketsetup</code></td></tr>
           <tr><td><code>s[command]</code></td><td>Run any custom command created in the dashboard</td><td><code>shello</code></td></tr>
         </tbody>
       </table>
