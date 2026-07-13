@@ -3,16 +3,118 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Bot Dashboard</title>
+  <title>Discord Bot — Features & Guide</title>
   <link rel="stylesheet" href="/css/style.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-  <script src="https://cdn.jsdelivr.net/npm/party-js@latest/bundle/party.min.js"></script>
 </head>
 <body>
-  <div id="app"></div>
-  <script src="/js/api.js"></script>
-  <script src="/js/router.js"></script>
-  <script src="/js/app.js"></script>
+
+  <nav class="nav">
+    <div class="nav-inner">
+      <a href="/" class="logo">✦ Bot Dashboard</a>
+      <div class="nav-links">
+        <a href="https://discord.com/oauth2/authorize?client_id=1521599353980981318" target="_blank" class="btn btn-discord btn-sm">Add to Discord</a>
+      </div>
+    </div>
+  </nav>
+
+  <section class="hero">
+    <div class="hero-badge">⚡ Free & Open Source</div>
+    <h1>Your All-in-One<br>Discord Bot</h1>
+    <p>Custom commands, moderation, leveling, tickets, autoroles, welcome messages — all managed from a beautiful web dashboard. No coding required.</p>
+    <div class="hero-actions">
+      <a href="https://discord.com/oauth2/authorize?client_id=1521599353980981318" target="_blank" class="btn btn-discord btn-lg">Add to Discord</a>
+    </div>
+  </section>
+
+  <div class="container" id="features">
+    <div class="section-label">Features</div>
+    <h2 class="section-title">Everything You Need</h2>
+    <div class="features">
+      <div class="feature-card"><div class="icon">⚙️</div><h3>Custom Commands</h3><p>Create your own commands with dynamic placeholders. Restrict them to specific roles or let everyone use them. Supports text responses and rich embeds.</p></div>
+      <div class="feature-card"><div class="icon">🛡️</div><h3>Moderation</h3><p>Kick, ban, mute, warn, and purge messages — all with automatic case logging. Keep your server safe with powerful moderation tools.</p></div>
+      <div class="feature-card"><div class="icon">📈</div><h3>Leveling</h3><p>Members earn XP by chatting in text channels. Track progress with levels and a leaderboard. Enable or disable anytime from the dashboard.</p></div>
+      <div class="feature-card"><div class="icon">🎫</div><h3>Tickets</h3><p>Let users open support tickets with <code>sticket</code>. Staff gets a private channel to help. Close tickets with <code>sclose</code>. Assign staff roles from the dashboard.</p></div>
+      <div class="feature-card"><div class="icon">👋</div><h3>Welcome & Leave</h3><p>Greet new members and say goodbye when they leave. Fully customizable messages with placeholders for user name, server name, and member count.</p></div>
+      <div class="feature-card"><div class="icon">🎯</div><h3>Autoroles</h3><p>Automatically assign roles when someone joins your server. Set up multiple autoroles from the dashboard — perfect for verification or self-roles.</p></div>
+    </div>
+  </div>
+
+  <div class="container" id="commands">
+    <div class="divider"></div>
+    <div class="section-label">Commands</div>
+    <h2 class="section-title">Full Command Reference</h2>
+    <p style="color:var(--text2);margin-bottom:24px;max-width:600px;">The default prefix is <code>s</code>. You can change it anytime from the dashboard settings.</p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Command</th><th>Description</th><th>Usage</th></tr></thead>
+        <tbody>
+          <tr><td><code>sping</code></td><td>Check if the bot is online</td><td><code>sping</code></td></tr>
+          <tr><td><code>shelp</code></td><td>Show all available commands</td><td><code>shelp</code></td></tr>
+          <tr><td><code>srank</code></td><td>Check your XP and level</td><td><code>srank</code> or <code>srank @user</code></td></tr>
+          <tr><td><code>sleaderboard</code></td><td>Show the server level leaderboard</td><td><code>sleaderboard</code></td></tr>
+          <tr><td><code>skick</code></td><td>Kick a member from the server</td><td><code>skick @user reason</code></td></tr>
+          <tr><td><code>sban</code></td><td>Ban a member from the server</td><td><code>sban @user reason</code></td></tr>
+          <tr><td><code>smute</code></td><td>Mute a member (text only)</td><td><code>smute @user reason</code></td></tr>
+          <tr><td><code>sunmute</code></td><td>Unmute a member</td><td><code>sunmute @user</code></td></tr>
+          <tr><td><code>swarn</code></td><td>Warn a member (logged)</td><td><code>swarn @user reason</code></td></tr>
+          <tr><td><code>sclear</code></td><td>Bulk delete messages</td><td><code>sclear 10</code></td></tr>
+          <tr><td><code>sticket</code></td><td>Create a support ticket</td><td><code>sticket Need help with roles</code></td></tr>
+          <tr><td><code>sclose</code></td><td>Close your open ticket</td><td><code>sclose</code></td></tr>
+          <tr><td><code>s[command]</code></td><td>Run any custom command created in the dashboard</td><td><code>shello</code></td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="container" id="guide">
+    <div class="divider"></div>
+    <div class="section-label">Getting Started</div>
+    <h2 class="section-title">Setup Guide</h2>
+    <div class="guide-steps">
+      <div class="guide-step">
+        <div class="step-number">1</div>
+        <div class="step-content">
+          <h3>Invite the Bot</h3>
+          <p>Click the <strong>Add to Discord</strong> button above. Select your server and authorize the bot. It needs basic permissions to read messages, send messages, manage channels, and moderate members.</p>
+        </div>
+      </div>
+      <div class="guide-step">
+        <div class="step-number">2</div>
+        <div class="step-content">
+          <h3>Login to Dashboard</h3>
+          <p>Click <strong>Login with Discord</strong> on the dashboard to access settings. You must have <strong>Manage Server</strong> permission in your server to configure the bot.</p>
+        </div>
+      </div>
+      <div class="guide-step">
+        <div class="step-number">3</div>
+        <div class="step-content">
+          <h3>Configure Your Server</h3>
+          <p>Use the dashboard tabs to set up custom commands, configure welcome/leave messages, enable leveling, set up tickets, and assign autoroles.</p>
+        </div>
+      </div>
+      <div class="guide-step">
+        <div class="step-number">4</div>
+        <div class="step-content">
+          <h3>Start Using Commands</h3>
+          <p>Once configured, members can use the <code>s</code> prefix in your server. Type <code>shelp</code> to see all available commands, or use the custom commands you created!</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="cta-section">
+      <h2>Ready to Get Started?</h2>
+      <p>Add the bot to your server and take control from the dashboard.</p>
+      <a href="https://discord.com/oauth2/authorize?client_id=1521599353980981318" target="_blank" class="btn btn-discord btn-lg">Add to Discord</a>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <p>Built with ❤️ &middot; Open source Discord bot</p>
+  </footer>
+
 </body>
 </html>
