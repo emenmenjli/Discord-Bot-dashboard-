@@ -1,5 +1,12 @@
 {
   "name": "discord-bot-dashboard",
   "version": "1.0.0",
-  "description": "Discord bot landing page — static site for Cloudflare Pages"
+  "description": "Discord bot landing page — static site for Cloudflare Pages",
+  "devDependencies": {
+    "wrangler": "^4.110.0"
+  },
+  "scripts": {
+    "deploy": "wrangler deploy",
+    "preview": "wrangler dev"
+  }
 }
